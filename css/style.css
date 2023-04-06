@@ -1,0 +1,215 @@
+/*loading page styles and animations*/
+.load-bg {
+    background-image: url("../images/background11.png");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* girl character float animation*/
+  .girl {
+    animation: float 3s ease-out infinite;
+  }
+  @keyframes float {
+    50% {
+      transform: translate(0, 20px);
+    }
+  }
+  /*load bar animation styles*/
+  .load-box {
+    height: 30px;
+    width: 350px;
+    border-width: 6px;
+    margin-top: 50px;
+    border-color: #071330;
+    border-style: solid;
+    position: relative;
+  }
+  .dot1, .dot2, .dot3, .dot4 {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color:#1b3850;
+    z-index: 100;
+  }
+  .dot1 {
+    top: -8px;
+    left: -8px;
+  }
+  .dot2 {
+    top:30px;
+    left: -8px;
+  }
+  .dot3 {
+    left: 350px;
+    top: -8px;
+  }
+  .dot4 {
+    left: 350px;
+    top: 30px;
+  }
+  .load-line {
+    height: 30px;
+    width: 350px;
+    background-color: #d8d8d8 ;
+    animation: mymove 3s linear 1;
+  }
+  
+  @keyframes mymove {
+    from {
+      width: 10%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  /*press start text animation styles*/
+  .text1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 48px;
+    animation: flickerAnimation 8s ease-in-out infinite;
+    margin-top: 50px;
+  }
+  a {
+    color: #071330;
+  }
+  
+  @keyframes flickerAnimation {
+    0%  {opacity:0;}
+    35% {opacity: 0;}
+    70% {opacity:1;}
+    75% {opacity:0;}
+    80% {opacity:1;}
+    85% {opacity: 0;}
+    90% {opacity:1;}
+    95% {opacity: 0;}
+    100% {opacity:1;}
+  }
+  /* game page styles*/
+  
+  .game-bg {
+    background-image: url("../images/background-final.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  /*character styles and animation*/
+  .character {
+    width: 150px;
+    position: absolute;
+    left: 5%;
+    top: 75%;
+    animation: movement 6s forwards, 
+    jump 2s 4s forwards;
+  }
+  
+  @keyframes movement {
+    from {
+      left: 5%;
+    }
+    to {
+      left: 80%;
+    }
+  
+  }
+  @keyframes jump {
+    0% { top: 75%; }
+    50% { top: 65%; }
+    100% { top: 75%; }
+  }
+  
+  /*clouds style and animation*/
+  .clouds {
+    position: absolute;
+    width: 350px;
+    right: 0%;
+    top: 20%;
+    animation: moveleft 10s ease-in-out forwards;
+  
+  }
+  @keyframes moveleft {
+    from {
+      right: 0%;
+    }
+    to {
+      right: 100%;
+    }
+  }
+  /*dropping star style and animation*/
+  
+  .star {
+    width: 70px;
+    position: absolute;
+    left: 80%; 
+    top: 10%;
+    z-index: 1;
+    animation: drop 3s 2s linear forwards;
+  }
+  
+  @keyframes drop {
+    0%{
+      top: 10%; opacity:1;
+    }
+    90% {
+      top: 65%; opacity:1;
+    }
+    100% {
+      top: 66%; opacity:0;
+    }
+    
+  }
+  /*win text animation*/
+  
+  .win-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 64px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: flickerwin 14s 1 forwards;
+    color: #FF5C5C;
+  }
+  
+  @keyframes flickerwin {
+    0%  {opacity:0;}
+    35% {opacity: 0;}
+    65% {opacity:1;}
+    70% {opacity:0;}
+    75% {opacity:1;}
+    80% {opacity:0;}
+    85% {opacity:1;}
+    90% {opacity:0;}
+    95% {opacity:1;}
+    100% {opacity:0;}
+  }
+  /* hearts bar*/
+  
+  .hearts {
+    position: absolute;
+    width: 150px;
+    top: 5%;
+    left: 5%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    
